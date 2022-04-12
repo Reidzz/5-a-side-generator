@@ -42,3 +42,13 @@
     cursor: pointer;
     font-size: 0.85rem;
 }
+
+.team-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.team-list {
+    padding: 1rem 0;
+    list-style-type: none;
+}
