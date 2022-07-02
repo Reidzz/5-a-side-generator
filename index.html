@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/football.png">
     <link rel="stylesheet" href="style.css">
     <title>5-A-Side Generator</title>
 </head>
 <body>
 
     <div class="main-container">
-        <h1 class="form-title grid-span grid-item">5-A-Side Generator</h1>
+        <h1 class="main-title">5-A-Side Generator</h1>
         <div class="form-container grid-item">
             <form class="player-form">
                 <label for="team" class="form-label">Player Name</label>
@@ -20,23 +21,19 @@
             </form>
         </div>
         <div class="form-container grid-item">
-            <div class="player-form team">
+            <div class="player-form team hidden">
                 <div class="title-container">
                     <h1 class="team-name">Team 1</h1>
                     <h1 class="team-name">Team 2</h1>
                 </div>
                 <div class="team-list-container">
-                    <ul class="team-list left">
-                    </ul>
-                    <ul class="team-list right">
-                    </ul>
+                    <ul class="team-list left"></ul>
+                    <ul class="team-list right"></ul>
                 </div>
             </div>
         </div>
-        <div class="btn-container grid-span">
-            <div class="reshuffle-btn grid-item">Reshuffle Teams
-                <!--<p>Reshuffle Teams</p>-->
-            </div>
+        <div class="btn-container hidden">
+            <div class="submit-btn reshuffle-btn">Reshuffle</div>
         </div>
     </div>
 
