@@ -5,23 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Team Selector</title>
+    <title>5-A-Side Generator</title>
 </head>
 <body>
 
-    <div class="form-container">
-        <h1 class="form-title">Football Teams</h1>
-        <form class="team-form">
-            <label for="team" class="form-label">Team Name</label>
-            <input type="text" class="form-input" id="team" name="team">
-            <div class="warning-message"></div>
-            <input type="button" class="form-input submit-btn" id="submit" value="Submit">
-        </form>
-        <div class="team-container">
-            <ul class="team-list left">
-            </ul>
-            <ul class="team-list right">
-            </ul>
+    <div class="main-container">
+        <h1 class="form-title grid-span grid-item">5-A-Side Generator</h1>
+        <div class="form-container grid-item">
+            <form class="player-form">
+                <label for="team" class="form-label">Player Name</label>
+                <input type="text" class="form-input" id="player" name="player">
+                <div class="form-message"></div>
+                <input type="button" class="form-input submit-btn" id="submit" value="Submit">
+            </form>
+        </div>
+        <div class="form-container grid-item">
+            <div class="player-form team">
+                <div class="title-container">
+                    <h1 class="team-name">Team 1</h1>
+                    <h1 class="team-name">Team 2</h1>
+                </div>
+                <div class="team-list-container">
+                    <ul class="team-list left">
+                    </ul>
+                    <ul class="team-list right">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="btn-container grid-span">
+            <div class="reshuffle-btn grid-item">Reshuffle Teams
+                <!--<p>Reshuffle Teams</p>-->
+            </div>
         </div>
     </div>
 
