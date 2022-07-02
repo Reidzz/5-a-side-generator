@@ -7,85 +7,34 @@
 
 body {
     position: relative;
-    background-image: url("images/zidane-headbutt-scaled2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("images/zidane-headbutt.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    /*padding: 0.75rem;*/
-    /*height: 100vh;*/
-    overflow: hidden;
-    /*min-height: 800px;*/
-}
-
-.form-title {
-    /*position: absolute;
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -50%);*/
-    /*max-width: 400px;*/
-    /*max-width: 100%;*/
-    /*width: 100%;*/
-    text-align: center;
-    color: white;
-    /*padding: 1rem;*/
-    /*margin-top: 1rem;*/
-    /*margin-bottom: 1rem;*/
+    padding: 0 0.75rem;
 }
 
 .main-container {
-    padding: 0 0.75rem;
     max-width: 400px;
-    /*max-width: 1200px;*/
     min-height: 100vh;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    /*display: grid;*/
+    display: grid;
     gap: 1rem;
-    /*grid-auto-columns: 1fr;*/
-    /*grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));*/
-    /*grid-template-columns: auto 1fr;*/
-    /*grid-template-columns: repeat(2, 1fr);*/
-    /*grid-template-columns: repeat(auto-fit, minmax(40%, 2fr));*/
-    /*grid-template-columns: repeat(auto-fit, 400px);*/
-    /*grid-auto-flow: column dense;*/
-    /*grid-auto-columns: auto;*/
-    /*grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));*/
-    /*grid-auto-columns: minmax(400px, auto);*/
-    /*align-content: center;*/
-    justify-content: center;
+    align-content: center;
 }
 
-.grid-span {
-    /*grid-column: 1 / -1;*/
-    /*grid-column: span 2;*/
-}
-
-.form-container {
-    /*padding: 0.75rem;*/
-    /*width: 100%;*/
-    /*max-width: 400px;*/
-    /*grid-row: 2;*/
-    /*min-height: 200px;*/
-    /*display: flex;
-    flex-wrap: wrap;*/
+.main-title {
+    text-align: center;
+    color: white;
 }
 
 .player-form {
-    /*width: 100%;*/
-    max-width: 400px;
     min-height: 200px;
     background: rgb(255, 255, 255);
     border: 1px solid rgb(229, 227, 221);
     border-radius: 4px;
     padding: 1.5rem;
-}
-
-.team {
-    /*display: flex;
-    justify-content: space-around;*/
-    min-height: 250px;
 }
 
 .form-input {
@@ -95,6 +44,11 @@ body {
     background: rgb(245, 244, 242);
     padding: 8px 8px;
     margin-top: 0.5rem;
+}
+
+.warning {
+    color: red;
+    padding-top: 0.5rem;
 }
 
 .submit-btn {
@@ -111,20 +65,15 @@ body {
 
 .submit-btn:hover {
     background: rgb(61, 168, 75);
+    border: 1px solid rgb(61, 168, 75);
 }
 
-.warning {
-    color: red;
-    padding-top: 0.5rem;
+.submit-btn:active {
+    transform: scale(0.9, 0.9);
 }
 
-.team-list {
-    list-style-type: none;
-    text-align: center;
-}
-
-.player-name {
-    margin-top: 1rem;
+.team {
+    min-height: 250px;
 }
 
 .title-container {
@@ -137,49 +86,35 @@ body {
     justify-content: space-around;
 }
 
-/*.btn-container {
-    display: flex;
-    justify-content: center;
-}*/
-
-.reshuffle-btn {
-    background: rgb(67, 194, 84);
-    border: 1px solid rgb(67, 194, 84);
-    border-radius: 90px;
-    color:rgb(245, 245, 245);
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 10px 10px;
-    width: 100%;
-    max-width: 200px;
+.team-list {
+    list-style-type: none;
     text-align: center;
-    /*grid-row: 3;*/
-    /*position: absolute;
-    left: 50%;
-    bottom: 25%;
-    transform: translate(-50%, -50%);*/
 }
 
-@media screen and (max-width: 30em) {
-    .main-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .grid-span {
-        grid-column: 1;
-    }
-    /*.main-container {
-        grid-template-columns: repeat(1, auto);
-    }*/
-    /*.main-container {
-        flex-direction: column;
-    }
-    .form-title {
-        top: 10%;
-        font-size: 1.5rem;
-    }*/
+.player-name {
+    margin-top: 1rem;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.reshuffle-btn {
+    padding: 8px 42px;
+    text-align: center;
+    margin-top: 0;
 }
 
 .hidden {
     display: none;
+}
+
+@media screen and (max-width: 20em) {
+    .main-title {
+        font-size: 1.6rem;
+    }
+    .team-name {
+        font-size: 1.4rem;
+    }
 }
