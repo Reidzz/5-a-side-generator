@@ -1,4 +1,3 @@
-// Variables
 const playerList = []
 const submitBtn = document.querySelector("#submit")
 const formInput = document.querySelector("#player")
@@ -10,32 +9,32 @@ const formMessage = document.querySelector(".form-message")
 const warning = `<p class="warning">Invalid Input</p>`
 const reshuffleBtn = document.querySelector(".btn-container")
 
-submitBtn.addEventListener("click", addPlayer) // Event listener that calls the addPlayer function
+submitBtn.addEventListener("click", addPlayer)
 
 function addPlayer() {
     if (formInput.value === "") {
         formMessage.innerHTML = warning
-        setTimeout(clearMessage, 3000) // The clearMessage function will run after 3 seconds pass
+        setTimeout(clearMessage, 3000)
         return false
     }
     userInput = document.getElementById("player").value
-    totalPlayers = playerList.push(userInput) // .push() method stores user input in the array and can return the array length
+    totalPlayers = playerList.push(userInput)
     form.reset()
     if (totalPlayers >= 10) {
-        submitBtn.removeEventListener("click", addPlayer) // Event listener removed to stop more players being added
+        submitBtn.removeEventListener("click", addPlayer)
         teamForm.classList.remove("hidden")
         reshuffleBtn.classList.remove("hidden")
-        let newPlayerList = arrayShuffle(playerList) // The arrayShuffle function is called and stored in a variable
-        displayTeams() // The displayTeams function is called
-        reshuffleBtn.addEventListener("click", function() { // Event listener that calls the previous functions
+        let newPlayerList = arrayShuffle(playerList)
+        displayTeams()
+        reshuffleBtn.addEventListener("click", function() {
             arrayShuffle(newPlayerList)
             clearTeams()
-            displayTeams(newPlayerList) // The newPlayerList variable is passed into these functions so they can run again
+            displayTeams(newPlayerList)
         })
     }
 }
 
-function arrayShuffle(arr) { // Function that shuffles the array order
+function arrayShuffle(arr) {
     let newPos
     let temp
     for (i = playerList.length - 1; i > 0; i--) {
@@ -47,7 +46,7 @@ function arrayShuffle(arr) { // Function that shuffles the array order
     return arr
 }
 
-function displayTeams() { // Function that splits the players into 2 teams of 5 players then displays the teams
+function displayTeams() {
     for (i = 0; i < playerList.length; i++) {
         let li = document.createElement("li")
         li.classList.add("player-name")
@@ -64,11 +63,11 @@ function displayTeams() { // Function that splits the players into 2 teams of 5 
     }
 }
 
-function clearMessage() { // Clears form warning message
+function clearMessage() {
     formMessage.innerHTML = ""
 }
 
-function clearTeams() { // Clears the teams
+function clearTeams() {
     teamContainerLeft.innerHTML = ""
     teamContainerRight.innerHTML = ""
 }
